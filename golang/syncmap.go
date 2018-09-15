@@ -6,11 +6,29 @@ import (
 	"sync"
 )
 
+type Bar struct {
+	i int
+}
+
+type Foo struct {
+	Bars []Bar
+	Str  string
+}
+
 func main() {
 	m := sync.Map{}
 
 	// 値の保存
 	m.Store("hoge", "fuga")
+
+	foo := Foo{
+		Bars: []Bar{{1}, {2}},
+		Str:  "hello",
+	}
+
+	m.Store("foo", foo)
+
+	fmt.Println(foo)
 
 	// 値の取得
 	if v, ok := m.Load("hoge"); ok {
@@ -37,4 +55,5 @@ func main() {
 
 	// 削除
 	m.Delete("hoge")
+
 }
