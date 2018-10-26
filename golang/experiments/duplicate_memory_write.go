@@ -6,16 +6,17 @@ import (
 )
 
 func main() {
-	var share string
+	m := make(map[string]string)
+	m["a"] = ""
 	wg := sync.WaitGroup{}
-	for i := 0; i < 1000; i++ {
+	for i := 0; i < 100; i++ {
 		wg.Add(1)
 		go func() {
-			share = share + "hoge"
-			fmt.Println(i, len(share))
+			m["a"] = m["a"] + "hoge"
+			fmt.Println(i, len(m["a"]))
 			wg.Done()
 		}()
 	}
 	wg.Wait()
-	fmt.Println(len(share))
+	fmt.Println(len(m["a"]))
 }
