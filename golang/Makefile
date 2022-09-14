@@ -4,6 +4,6 @@ run:
 	$(GO) run ./main.go
 
 test:
-	$(GO) test -v uryoya/code_by_example...
+	$(GO) test -v -shuffle=on ./...
 
 .PHONY: run test
