@@ -1,0 +1,20 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"name": "lang",
+			"path": "typescript/lang"
+		},
+		{
+			"name": "nestjs",
+			"path": "typescript/libs/nestjs"
+		}
+	],
+	"settings": {
+		"jest.disabledWorkspaceFolders": [
+			"CodeByExample"
+		]
+	}
+}
