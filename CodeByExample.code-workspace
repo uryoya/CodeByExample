@@ -1,20 +1,42 @@
 {
 	"folders": [
 		{
-			"path": "."
+			"path": ".",
 		},
 		{
-			"name": "lang",
-			"path": "typescript/lang"
+			"name": "fish",
+			"path": "fish"
 		},
 		{
-			"name": "nestjs",
-			"path": "typescript/libs/nestjs"
-		}
+			"name": "golang",
+			"path": "golang"
+		},
+		{
+			"name": "python",
+			"path": "python"
+		},
+		{
+			"name": "rust",
+			"path": "rust"
+		},
+		{
+			"name": "scala",
+			"path": "scala"
+		},
+		{
+			"name": "typescript",
+			"path": "typescript"
+		},
 	],
 	"settings": {
 		"jest.disabledWorkspaceFolders": [
-			"CodeByExample"
+			"CodeByExample",
+			"fish",
+			"python",
+			"typescript",
+			"scala",
+			"rust",
+			"golang"
 		]
 	}
 }
