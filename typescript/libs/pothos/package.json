@@ -1,0 +1,22 @@
+{
+  "name": "pothos_sample",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/main.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "prettier --write ."
+  },
+  "dependencies": {
+    "@pothos/core": "^3.38.0",
+    "graphql-yoga": "^5.0.0"
+  },
+  "volta": {
+    "node": "18.18.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.8.7",
+    "prettier": "^3.0.3",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  }
+}
