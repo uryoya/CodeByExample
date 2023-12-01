@@ -1,0 +1,10 @@
+{
+  "name": "crypto_blowfish",
+  "main": "main.js",
+  "scripts": {
+    "start": "NODE_OPTIONS=--openssl-legacy-provider node main.mjs"
+  },
+  "volta": {
+    "node": "20.10.0"
+  }
+}
