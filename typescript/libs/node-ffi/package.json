@@ -1,0 +1,12 @@
+{
+  "name": "node_ffi_sample",
+  "scripts": {
+    "start": "node main.js"
+  },
+  "volta": {
+    "node": "18.19.0"
+  },
+  "dependencies": {
+    "ffi-napi": "^4.0.3"
+  }
+}
