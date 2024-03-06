@@ -1,0 +1,13 @@
+{
+  "name": "data-oriented-programming",
+  "scripts": {
+    "start": "node src/main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "volta": {
+    "node": "20.10.0"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
+}
