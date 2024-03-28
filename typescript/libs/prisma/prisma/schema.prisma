@@ -7,21 +7,36 @@ generator client {
 
 datasource db {
   provider = "sqlite"
-  url      = env("DATABASE_URL")
+  url      = "file:./sample.db"
 }
 
-model User {
-  id    Int     @id @default(autoincrement())
-  email String  @unique
-  name  String?
-  posts Post[]
+model Media {
+  id    String @id
+  title String
+  url   String
+  type  String
+  image Image?
+  audio Audio?
+  video Video?
 }
 
-model Post {
-  id        Int     @id @default(autoincrement())
-  title     String
-  content   String?
-  published Boolean @default(false)
-  author    User    @relation(fields: [authorId], references: [id])
-  authorId  Int
+model Image {
+  id     String @id
+  media  Media  @relation(fields: [id], references: [id])
+  height Int
+  width  Int
+}
+
+model Audio {
+  id       String @id
+  media    Media  @relation(fields: [id], references: [id])
+  duration Int
+}
+
+model Video {
+  id       String @id
+  media    Media  @relation(fields: [id], references: [id])
+  height   Int
+  width    Int
+  duration Int
 }

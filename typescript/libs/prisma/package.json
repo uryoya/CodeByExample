@@ -1,14 +1,8 @@
 {
-  "name": "prisma",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "ts-node src/main.ts",
+    "build": "prisma generate && tsc"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
     "@types/node": "^18.15.11",
     "prisma": "^4.12.0",
