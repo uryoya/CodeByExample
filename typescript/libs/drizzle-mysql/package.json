@@ -1,0 +1,17 @@
+{
+  "scripts": {
+    "dev": "npx tsx --env-file=.env src/main.ts",
+    "dev:db": "docker-compose up -d"
+  },
+  "dependencies": {
+    "drizzle-orm": "^0.30.10",
+    "mysql2": "^3.9.7",
+    "typescript": "^5.4.5"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.11",
+    "drizzle-kit": "^0.21.1",
+    "prettier": "^3.2.5",
+    "tsx": "^3.12.2"
+  }
+}
