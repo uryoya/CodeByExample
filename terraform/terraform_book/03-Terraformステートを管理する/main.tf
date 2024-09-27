@@ -1,13 +1,13 @@
 terraform {
-  backend "s3" {
-    bucket = "uryoya-terraformbook-up-and-running-state"
-    # key: Terraformステートが書き込まれるべきS3バケット内のファイルパス
-    key            = "global/s3/terraform.tfstate"
-    region         = "us-east-2"
-    dynamodb_table = "terraform-up-and-running-locks"
-    # encrypt: この値をtrueに設定することでTerraformステートがS3に保存される際に暗号化される
-    encrypt = true
-  }
+  # backend "s3" {
+  #   bucket = "uryoya-terraformbook-up-and-running-state"
+  #   # key: Terraformステートが書き込まれるべきS3バケット内のファイルパス
+  #   key            = "global/s3/terraform.tfstate"
+  #   region         = "us-east-2"
+  #   dynamodb_table = "terraform-up-and-running-locks"
+  #   # encrypt: この値をtrueに設定することでTerraformステートがS3に保存される際に暗号化される
+  #   encrypt = true
+  # }
 }
 
 provider "aws" {
@@ -19,9 +19,9 @@ resource "aws_s3_bucket" "terraform_state" {
   bucket = "uryoya-terraformbook-up-and-running-state"
 
   # 誤ってS3バケットを削除するのを防止
-  lifecycle {
-    prevent_destroy = true
-  }
+  # lifecycle {
+  #   prevent_destroy = true
+  # }
 }
 
 # ステートファイルの完全な履歴が見られるように、バージョニングを有効化
