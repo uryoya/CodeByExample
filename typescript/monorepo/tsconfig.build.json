@@ -1,0 +1,8 @@
+{
+  "extends": "./tsconfig.json",
+  "references": [{ "path": "foo" }, { "path": "bar" }],
+  "compilerOptions": {
+    "rootDir": "src",
+    "outDir": "dist"
+  }
+}
