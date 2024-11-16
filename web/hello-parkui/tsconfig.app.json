@@ -6,6 +6,8 @@
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
+    "baseUrl": ".",
+    "paths": { "styled-system/*": ["./styled-system/*"] },
 
     /* Bundler mode */
     "moduleResolution": "Bundler",
