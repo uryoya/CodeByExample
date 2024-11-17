@@ -1,7 +1,20 @@
 import React from "react";
 import { css } from "../styled-system/css";
-import { Box, Container, HStack, Stack, VStack } from "../styled-system/jsx";
-import { container, hstack, stack, vstack } from "../styled-system/patterns";
+import {
+  Box,
+  Container,
+  HStack,
+  Stack,
+  VStack,
+  Wrap,
+} from "../styled-system/jsx";
+import {
+  container,
+  hstack,
+  stack,
+  vstack,
+  wrap,
+} from "../styled-system/patterns";
 
 type SectionTitleProps = {
   children?: React.ReactNode;
@@ -136,6 +149,35 @@ function App() {
         <div>Second</div>
         <div>Third</div>
       </VStack>
+
+      {/**
+       * Wrap
+       *
+       * Wrap(折り返し)パターンは要素間にスペースを追加するために使用され、十分なスペースがない場合は自動的に折り返す。
+       * Wrapパターンは次のプロパティを受け付ける。
+       * - gap: The gap between the elements in the stack.
+       * - columnGap: The gap between the elements in the stack horizontally.
+       * - rowGap: The gap between the elements in the stack vertically.
+       * - align: An alias for the css align-items property.
+       * - justify: An alias for the css justify-content property.
+       *
+       * @see https://panda-css.com/docs/concepts/patterns#wrap
+       */}
+      <SectionTitle>Wrap</SectionTitle>
+
+      <h3>function style</h3>
+      <div className={wrap({ gap: "6" })}>
+        <div className={css({ width: "300px" })}>First</div>
+        <div className={css({ width: "300px" })}>Second</div>
+        <div className={css({ width: "300px" })}>Third</div>
+      </div>
+
+      <h3>JSX style</h3>
+      <Wrap gap="6">
+        <div style={{ width: "300px" }}>First</div>
+        <div style={{ width: "300px" }}>Second</div>
+        <div style={{ width: "300px" }}>Third</div>
+      </Wrap>
     </>
   );
 }
