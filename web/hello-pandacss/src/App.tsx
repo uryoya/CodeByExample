@@ -1,6 +1,7 @@
 import React from "react";
 import { css } from "../styled-system/css";
 import {
+  AspectRatio,
   Box,
   Container,
   HStack,
@@ -9,6 +10,7 @@ import {
   Wrap,
 } from "../styled-system/jsx";
 import {
+  aspectRatio,
   container,
   hstack,
   stack,
@@ -178,6 +180,35 @@ function App() {
         <div style={{ width: "300px" }}>Second</div>
         <div style={{ width: "300px" }}>Third</div>
       </Wrap>
+
+      {/**
+       * Aspect Ratio
+       *
+       * Aspect Ratio (アスペクト比) パターンは、固定アスペクト比のコンテナを作成するために使用される。
+       * 画像、地図、ビデオなどのメディアを表示するときに使用される。
+       *
+       * @note ほとんどの場合、パターンの代わりに、aspectRatio プロパティを使用することが推奨される。
+       * @see https://panda-css.com/docs/concepts/patterns#aspect-ratio
+       */}
+      <SectionTitle>Aspect Ratio</SectionTitle>
+
+      <h3>function style</h3>
+      <div className={aspectRatio({ ratio: 16 / 9 })}>
+        <iframe
+          src="https://www.google.com/maps/embed"
+          title="Google map"
+          frameBorder="0"
+        />
+      </div>
+
+      <h3>JSX style</h3>
+      <AspectRatio ratio={16 / 9}>
+        <iframe
+          src="https://www.google.com/maps/embed"
+          title="Google map"
+          frameBorder="0"
+        />
+      </AspectRatio>
     </>
   );
 }
