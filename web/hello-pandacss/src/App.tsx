@@ -44,7 +44,7 @@ function App() {
        * @see https://panda-css.com/docs/concepts/patterns#box
        */}
       <SectionTitle>Box</SectionTitle>
-      <Box color="blue.300">
+      <Box color="blue.300" className={css({ border: "solid" })}>
         <div>Cool!</div>
       </Box>
 
@@ -65,17 +65,17 @@ function App() {
       <SectionTitle>Container</SectionTitle>
 
       <h3>function style</h3>
-      <div className={container()}>
-        <div>First</div>
-        <div>Second</div>
-        <div>Third</div>
+      <div className={container({ border: "solid" })}>
+        <div className={css({ border: "solid", color: "red" })}>First</div>
+        <div className={css({ border: "solid", color: "red" })}>Second</div>
+        <div className={css({ border: "solid", color: "red" })}>Third</div>
       </div>
 
       <h3>JSX style</h3>
-      <Container>
-        <div>First</div>
-        <div>Second</div>
-        <div>Third</div>
+      <Container className={css({ border: "solid" })}>
+        <div className={css({ border: "solid", color: "red" })}>First</div>
+        <div className={css({ border: "solid", color: "red" })}>Second</div>
+        <div className={css({ border: "solid", color: "red" })}>Third</div>
       </Container>
 
       {/**
@@ -93,17 +93,17 @@ function App() {
       <SectionTitle>Stack</SectionTitle>
 
       <h3>function style</h3>
-      <div className={stack({ gap: "6", padding: "4" })}>
-        <div>First</div>
-        <div>Second</div>
-        <div>Third</div>
+      <div className={stack({ gap: "6", padding: "4", border: "solid" })}>
+        <div className={css({ border: "solid", color: "red" })}>First</div>
+        <div className={css({ border: "solid", color: "red" })}>Second</div>
+        <div className={css({ border: "solid", color: "red" })}>Third</div>
       </div>
 
       <h3>JSX style</h3>
-      <Stack gap="6" padding="4">
-        <div>First</div>
-        <div>Second</div>
-        <div>Third</div>
+      <Stack gap="6" padding="4" className={css({ border: "solid" })}>
+        <div className={css({ border: "solid", color: "red" })}>First</div>
+        <div className={css({ border: "solid", color: "red" })}>Second</div>
+        <div className={css({ border: "solid", color: "red" })}>Third</div>
       </Stack>
 
       {/**
@@ -116,17 +116,17 @@ function App() {
       <SectionTitle>HStack</SectionTitle>
 
       <h3>function style</h3>
-      <div className={hstack({ gap: "6" })}>
-        <div>First</div>
-        <div>Second</div>
-        <div>Third</div>
+      <div className={hstack({ gap: "6", border: "solid" })}>
+        <div className={css({ border: "solid", color: "red" })}>First</div>
+        <div className={css({ border: "solid", color: "red" })}>Second</div>
+        <div className={css({ border: "solid", color: "red" })}>Third</div>
       </div>
 
       <h3>JSX style</h3>
-      <HStack gap="6">
-        <div>First</div>
-        <div>Second</div>
-        <div>Third</div>
+      <HStack gap="6" className={css({ border: "solid" })}>
+        <div className={css({ border: "solid", color: "red" })}>First</div>
+        <div className={css({ border: "solid", color: "red" })}>Second</div>
+        <div className={css({ border: "solid", color: "red" })}>Third</div>
       </HStack>
 
       {/**
@@ -139,17 +139,17 @@ function App() {
       <SectionTitle>VStack</SectionTitle>
 
       <h3>function style</h3>
-      <div className={vstack({ gap: "6" })}>
-        <div>First</div>
-        <div>Second</div>
-        <div>Third</div>
+      <div className={vstack({ gap: "6", border: "solid" })}>
+        <div className={css({ border: "solid", color: "red" })}>First</div>
+        <div className={css({ border: "solid", color: "red" })}>Second</div>
+        <div className={css({ border: "solid", color: "red" })}>Third</div>
       </div>
 
       <h3>JSX style</h3>
-      <VStack gap="6">
-        <div>First</div>
-        <div>Second</div>
-        <div>Third</div>
+      <VStack gap="6" className={css({ border: "solid" })}>
+        <div className={css({ border: "solid", color: "red" })}>First</div>
+        <div className={css({ border: "solid", color: "red" })}>Second</div>
+        <div className={css({ border: "solid", color: "red" })}>Third</div>
       </VStack>
 
       {/**
@@ -168,17 +168,29 @@ function App() {
       <SectionTitle>Wrap</SectionTitle>
 
       <h3>function style</h3>
-      <div className={wrap({ gap: "6" })}>
-        <div className={css({ width: "300px" })}>First</div>
-        <div className={css({ width: "300px" })}>Second</div>
-        <div className={css({ width: "300px" })}>Third</div>
+      <div className={wrap({ gap: "6", border: "solid" })}>
+        <div className={css({ width: "300px", border: "solid", color: "red" })}>
+          First
+        </div>
+        <div className={css({ width: "300px", border: "solid", color: "red" })}>
+          Second
+        </div>
+        <div className={css({ width: "300px", border: "solid", color: "red" })}>
+          Third
+        </div>
       </div>
 
       <h3>JSX style</h3>
-      <Wrap gap="6">
-        <div style={{ width: "300px" }}>First</div>
-        <div style={{ width: "300px" }}>Second</div>
-        <div style={{ width: "300px" }}>Third</div>
+      <Wrap gap="6" className={css({ border: "solid" })}>
+        <div style={{ width: "300px", border: "solid", color: "red" }}>
+          First
+        </div>
+        <div style={{ width: "300px", border: "solid", color: "red" }}>
+          Second
+        </div>
+        <div style={{ width: "300px", border: "solid", color: "red" }}>
+          Third
+        </div>
       </Wrap>
 
       {/**
@@ -193,7 +205,7 @@ function App() {
       <SectionTitle>Aspect Ratio</SectionTitle>
 
       <h3>function style</h3>
-      <div className={aspectRatio({ ratio: 16 / 9 })}>
+      <div className={aspectRatio({ ratio: 16 / 9, border: "solid" })}>
         <iframe
           src="https://www.google.com/maps/embed"
           title="Google map"
@@ -202,7 +214,7 @@ function App() {
       </div>
 
       <h3>JSX style</h3>
-      <AspectRatio ratio={16 / 9}>
+      <AspectRatio ratio={16 / 9} className={css({ border: "solid" })}>
         <iframe
           src="https://www.google.com/maps/embed"
           title="Google map"
