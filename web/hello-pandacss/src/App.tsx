@@ -15,6 +15,7 @@ import {
   container,
   flex,
   hstack,
+  linkOverlay,
   stack,
   vstack,
   wrap,
@@ -264,6 +265,26 @@ function App() {
         <div className={css({ border: "solid", color: "red" })}>Second</div>
         <div className={css({ border: "solid", color: "red" })}>Third</div>
       </Flex>
+
+      {/**
+       * LinkOverlay
+       *
+       * リンク オーバーレイ パターンは、 `position:relative` で、リンクのクリック可能領域を最も近い親まで拡張するために使用されます。
+       *
+       * @see https://panda-css.com/docs/concepts/patterns#linkoverlay
+       */}
+      <SectionTitle>LinkOverlay</SectionTitle>
+
+      <div className={css({ pos: "relative", border: "solid" })}>
+        <img
+          src="https://via.placeholder.com/150"
+          alt="placeholder"
+          className={css({ border: "solid", color: "red" })}
+        />
+        <a href="#" className={linkOverlay({ border: "solid", color: "red" })}>
+          View more
+        </a>
+      </div>
     </>
   );
 }
