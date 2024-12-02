@@ -4,6 +4,7 @@ import {
   AspectRatio,
   Box,
   Container,
+  Flex,
   HStack,
   Stack,
   VStack,
@@ -12,6 +13,7 @@ import {
 import {
   aspectRatio,
   container,
+  flex,
   hstack,
   stack,
   vstack,
@@ -221,6 +223,47 @@ function App() {
           frameBorder="0"
         />
       </AspectRatio>
+
+      {/**
+       * Flex
+       *
+       * FlexパターンはFlexコンテナーの作成に使用され、Flexプロパティのいくつかのショートカットを提供する。
+       * Flexパターンは次のプロパティを受け付ける。
+       * - direction: The flex direction of the container. Can be row, column, row-reverse or column-reverse.
+       * - wrap: Whether to wrap the flex items. The value is a boolean.
+       * - align: An alias for the css align-items property.
+       * - justify: An alias for the css justify-content property.
+       * - basis: An alias for the css flex-basis property.
+       * - grow: An alias for the css flex-grow property.
+       * - shrink: An alias for the css flex-shrink property.
+       *
+       * @see https://panda-css.com/docs/concepts/patterns#flex
+       */}
+      <SectionTitle>Flex</SectionTitle>
+
+      <h3>function style</h3>
+      <div
+        className={flex({
+          direction: "row",
+          align: "center",
+          border: "solid",
+        })}
+      >
+        <div className={css({ border: "solid", color: "red" })}>First</div>
+        <div className={css({ border: "solid", color: "red" })}>Second</div>
+        <div className={css({ border: "solid", color: "red" })}>Third</div>
+      </div>
+
+      <h3>JSX style</h3>
+      <Flex
+        direction="column"
+        align="center"
+        className={css({ border: "solid" })}
+      >
+        <div className={css({ border: "solid", color: "red" })}>First</div>
+        <div className={css({ border: "solid", color: "red" })}>Second</div>
+        <div className={css({ border: "solid", color: "red" })}>Third</div>
+      </Flex>
     </>
   );
 }
