@@ -14,6 +14,7 @@ import {
   aspectRatio,
   container,
   flex,
+  float,
   hstack,
   linkOverlay,
   stack,
@@ -284,6 +285,32 @@ function App() {
         <a href="#" className={linkOverlay({ border: "solid", color: "red" })}>
           View more
         </a>
+      </div>
+
+      {/**
+       * Float
+       *
+       * Floatパターンは、要素をコンテナーの上下左右に固定するために使用する。
+       * Floatは次のプロパティを受け付ける。
+       * - placement: The placement of the element. Can be top-start, top, top-end, bottom-start, bottom, bottom-end, left-start, left, left-end, right-start, right or right-end.
+       * - offset: The offset of the element from the edge of the container. Can be a number or a string.
+       * - offsetX: Same as offset, but only for the horizontal axis.
+       * - offsetY: Same as offset, but only for the vertical axis.
+       *   
+       * @see https://panda-css.com/docs/concepts/patterns#float
+       */}
+      <SectionTitle>Float</SectionTitle>
+
+      <div className={css({ position: "relative", border: "solid" })}>
+        <div
+          className={float({
+            placement: "top-start",
+            border: "solid",
+            color: "red",
+          })}
+        >
+          3
+        </div>
       </div>
     </>
   );
