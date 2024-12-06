@@ -23,6 +23,7 @@ import {
   linkOverlay,
   square,
   stack,
+  visuallyHidden,
   vstack,
   wrap,
 } from "../styled-system/patterns";
@@ -34,6 +35,17 @@ type SectionTitleProps = {
 const SectionTitle: React.FC<SectionTitleProps> = ({ children }) => (
   <h2 className={css({ bg: "gray.200", fontSize: "xl" })}>{children}</h2>
 );
+
+export function Checkbox() {
+  return (
+    <label>
+      <input type="checkbox" className={visuallyHidden()}>
+        I'm hidden
+      </input>
+      <span>Checkbox</span>
+    </label>
+  );
+}
 
 function App() {
   return (
@@ -409,6 +421,16 @@ function App() {
        */}
       <SectionTitle>Square</SectionTitle>
       <div className={square({ size: "12", bg: "red.300" })} />
+
+      {/**
+       * Visually Hidden
+       *
+       * Visually Hiddenパターンは、要素を視覚的に非表示にし、スクリーン リーダーからはアクセスできるようにするために使用される。
+       *
+       * @see https://panda-css.com/docs/concepts/patterns#visually-hidden
+       */}
+      <SectionTitle>Visually Hidden</SectionTitle>
+      {/* <Checkbox /> */}
     </>
   );
 }
