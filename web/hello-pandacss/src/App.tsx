@@ -21,6 +21,7 @@ import {
   gridItem,
   hstack,
   linkOverlay,
+  square,
   stack,
   vstack,
   wrap,
@@ -396,6 +397,18 @@ function App() {
        */}
       <SectionTitle>Circle</SectionTitle>
       <div className={circle({ size: "12", bg: "red.300" })} />
+
+      {/**
+       * Square
+       *
+       * Squareパターンは、幅と高さが等しい正方形を作成するために使用されます。
+       * Squareパターンは次のプロパティを受け付ける。
+       * - size: The size of the square. Can be a sizing token, or arbitrary value.
+       *
+       * @see https://panda-css.com/docs/concepts/patterns#square
+       */}
+      <SectionTitle>Square</SectionTitle>
+      <div className={square({ size: "12", bg: "red.300" })} />
     </>
   );
 }
