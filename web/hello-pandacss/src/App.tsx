@@ -15,6 +15,8 @@ import {
   container,
   flex,
   float,
+  grid,
+  gridItem,
   hstack,
   linkOverlay,
   stack,
@@ -296,7 +298,7 @@ function App() {
        * - offset: The offset of the element from the edge of the container. Can be a number or a string.
        * - offsetX: Same as offset, but only for the horizontal axis.
        * - offsetY: Same as offset, but only for the vertical axis.
-       *   
+       *
        * @see https://panda-css.com/docs/concepts/patterns#float
        */}
       <SectionTitle>Float</SectionTitle>
@@ -311,6 +313,52 @@ function App() {
         >
           3
         </div>
+      </div>
+
+      {/**
+       * Gird
+       *
+       * Gridパターンは、グリッド レイアウトを作成するために使用される。
+       * Girdは次のプロパティを受け付ける。
+       * - columns: The number of columns in the grid.
+       * - gap: The gap between the elements in the stack.
+       * - columnGap: The gap between the elements in the stack horizontally.
+       * - rowGap: The gap between the elements in the stack vertically.
+       * - minChildWidth: The minimum width of the child elements before wrapping (must not be used with columns).
+       *
+       * @see https://panda-css.com/docs/concepts/patterns#grid
+       */}
+      <SectionTitle>Gird</SectionTitle>
+
+      <div className={grid({ columns: 3, gap: "6", border: "solid" })}>
+        <div className={css({ border: "solid", color: "red" })}>First</div>
+        <div className={css({ border: "solid", color: "red" })}>Second</div>
+        <div className={css({ border: "solid", color: "red" })}>Third</div>
+      </div>
+
+      {/**
+       * Gird Item
+       *
+       * Gird Itemパターンは、グリッド コンテナーの子のスタイルを設定するために使用される。
+       * GirdItemは次のプロパティを受け付ける。
+       * - colSpan: The number of columns the item spans.
+       * - rowSpan: The number of rows the item spans.
+       * - rowStart: The row the item starts at.
+       * - rowEnd: The row the item ends at.
+       * - colStart: The column the item starts at.
+       * - colEnd: The column the item ends at.
+       *
+       * @see https://panda-css.com/docs/concepts/patterns#grid-item
+       */}
+      <SectionTitle>Gird Item</SectionTitle>
+      <div className={grid({ columns: 3, gap: "6", border: "solid" })}>
+        <div
+          className={gridItem({ colSpan: 2, border: "solid", color: "blue" })}
+        >
+          First
+        </div>
+        <div className={css({ border: "solid", color: "red" })}>Second</div>
+        <div className={css({ border: "solid", color: "red" })}>Third</div>
       </div>
     </>
   );
