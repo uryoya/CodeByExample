@@ -12,6 +12,7 @@ import {
 } from "../styled-system/jsx";
 import {
   aspectRatio,
+  circle,
   container,
   divider,
   flex,
@@ -383,6 +384,18 @@ function App() {
           Second
         </button>
       </div>
+
+      {/**
+       * Circle
+       *
+       * Circleパターンは円を作成するために使用される。
+       * Circleパターンは次のプロパティを受け付ける。
+       * - size: The size of the circle. Can be a sizing token, or arbitrary value.
+       *
+       * @see https://panda-css.com/docs/concepts/patterns#circle
+       */}
+      <SectionTitle>Circle</SectionTitle>
+      <div className={circle({ size: "12", bg: "red.300" })} />
     </>
   );
 }
