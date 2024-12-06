@@ -13,6 +13,7 @@ import {
 import {
   aspectRatio,
   container,
+  divider,
   flex,
   float,
   grid,
@@ -359,6 +360,28 @@ function App() {
         </div>
         <div className={css({ border: "solid", color: "red" })}>Second</div>
         <div className={css({ border: "solid", color: "red" })}>Third</div>
+      </div>
+
+      {/**
+       * Divider
+       *
+       * Dividerパターンは、水平または垂直のディバイダーを作成するために使用される。
+       * Dividerパターンは次のプロパティを受け付ける
+       * - orientation: The orientation of the divider. Can be horizontal or vertical.
+       * - thickness: The thickness of the divider. Can be a sizing token, or arbitrary value.
+       * - color: The color of the divider. Can be a color token, or arbitrary value.
+       *
+       * @see https://panda-css.com/docs/concepts/patterns#divider
+       */}
+      <SectionTitle>Divider</SectionTitle>
+      <div className={stack({ border: "solid" })}>
+        <button className={css({ border: "solid", color: "red" })}>
+          First
+        </button>
+        <div className={divider({ orientation: "horizontal" })} />
+        <button className={css({ border: "solid", color: "red" })}>
+          Second
+        </button>
       </div>
     </>
   );
