@@ -1,0 +1,6 @@
+# Hello World
+
+```
+$ dotnet run
+```
+
