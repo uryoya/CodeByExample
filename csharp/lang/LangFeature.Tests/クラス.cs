@@ -1,5 +1,5 @@
 using FluentAssertions;
-using LangFeature;
+using LangFeature.クラス;
 
 namespace LangFeature.Tests;
 
@@ -46,8 +46,26 @@ public sealed class クラス
     [Fact]
     public void 継承()
     {
-        var manager =  new Manager();
-        
+        var manager = new Manager();
+
         manager.Should().BeAssignableTo<Employee>();
+    }
+
+    [Fact]
+    public void 等価性()
+    {
+        var person1 = new Person
+        {
+            FirstName = "乱歩",
+            LastName = "江戸川"
+        };
+        var person2 = new Person
+        {
+            FirstName = "乱歩",
+            LastName = "江戸川"
+        };
+
+        (person1 == person2).Should().BeFalse();
+        ReferenceEquals(person1, person2).Should().BeFalse();
     }
 }

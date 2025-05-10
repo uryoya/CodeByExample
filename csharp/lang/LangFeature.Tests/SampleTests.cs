@@ -1,4 +1,4 @@
-﻿using Xunit;
+using Xunit;
 using LangFeature;  // テスト対象の名前空間
 using FluentAssertions;
 
