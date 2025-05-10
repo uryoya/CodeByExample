@@ -10,7 +10,7 @@ namespace LangFeature.Tests;
  */
 public sealed class 変数宣言
 {
-     // https://learn.microsoft.com/ja-jp/dotnet/csharp/language-reference/statements/declarations
+    // https://learn.microsoft.com/ja-jp/dotnet/csharp/language-reference/statements/declarations
     [Fact]
     public void ローカル変数()
     {
@@ -44,7 +44,7 @@ public sealed class 変数宣言
     {
         const string Greeting = "こんにちは";
         const double MinLimit = -10.0, MaxLimit = 10.0;
-        
+
         Greeting.Should().Be("こんにちは");
         MinLimit.Should().Be(-10.0);
         MaxLimit.Should().Be(10.0);
@@ -57,7 +57,7 @@ public sealed class 変数宣言
         var greeting = "Hello";
         var a = 32;
         var xs = new List<double>();
-        
+
         greeting.Should().Be("Hello");
         a.Should().Be(32);
         xs.Should().BeOfType(typeof(List<double>));
